@@ -1,5 +1,7 @@
 <resources>
     <string name="Hello">Hello World !!</string>
     <string name="button">New Button !!</string>
-    <string name="toast">This is not a toast</string>
+    <string name="toast">New Activity</string>
+    <string name="notification_title">Notification</string>
+    <string name="notification_text">WoW, you show a notification</string>
 </resources>
