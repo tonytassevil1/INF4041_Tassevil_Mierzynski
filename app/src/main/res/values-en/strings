@@ -1,0 +1,5 @@
+<resources>
+    <string name="Hello">Hello World !!</string>
+    <string name="button">New Button !!</string>
+    <string name="toast">This is not a toast</string>
+</resources>
