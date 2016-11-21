@@ -1,12 +1,19 @@
 package org.esiea.tassevil_mierzynski.app;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.IntentFilter;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
-
+import android.content.Intent;
+import android.os.Handler;
+import android.view.Window;
+import android.widget.ListView;
 
 public class ListRecycler extends AppCompatActivity {
 
@@ -35,5 +42,16 @@ public class ListRecycler extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        IntentFilter intentFilter = new IntentFilter(Biers_update);
+        LocalBroadcastManager.getInstance(this).registerReceiver(new BierUpdate(),intentFilter);
+    }
+
+    public class BierUpdate extends BroadcastReceiver{
+        @Override
+        public void onRecieve(Context context, Intent intent){
+            //Notification
+            //MAJ interface
+        }
     }
 }
